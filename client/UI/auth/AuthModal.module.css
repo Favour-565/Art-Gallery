@@ -1,0 +1,21 @@
+.authmodal{
+    background: #fff;
+    width: 400px;
+    margin:0% auto
+}
+
+.inputDiv{
+    margin: 3% 0%;
+}
+
+.inputDiv span{
+    color:crimson
+}
+
+.inputStyle{
+    padding-left: 3%;
+}
+
+.inputStyle::placeholder{
+    color:#000
+}

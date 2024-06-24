@@ -1,0 +1,11 @@
+.modalOverlay{
+    background-color: #0000006e;
+    position:fixed;
+    left:0%;
+    top:0%;
+    display:flex;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    height:100vh
+}

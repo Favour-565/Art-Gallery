@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  width:100%;
+}
+
+.herobg {
+  background-image: url(../public/home/herobg.jpeg);
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.herobg::after,
+.authbg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text,
+.about-text {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.hero-text {
+  font-weight: 600;
+}
+
+.gal-1 {
+  grid-area: gal-1;
+  background-image: url("../public/home/gal1.svg");
+  background-size: cover;
+}
+
+.gal-2 {
+  grid-area: gal-2;
+  background-image: url("../public/home/gal2.svg");
+  background-size: cover;
+}
+
+.gal-3 {
+  grid-area: gal-3;
+  background-image: url("../public/home/gal3.svg");
+  background-size: cover;
+}
+
+.gal-4 {
+  grid-area: gal-4;
+  background-image: url("../public/home/gal4.svg");
+  background-size: cover;
+}
+
+.gal-5 {
+  grid-area: gal-5;
+  background-image: url("../public/home/gal5.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gal-6 {
+  grid-area: gal-6;
+  background-image: url("../public/home/gal6.svg");
+  background-size: cover;
+}
+
+.gal-7 {
+  grid-area: gal-7;
+  background-image: url("../public/home/gal7.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 3px 3px;
+  grid-template-areas:
+    "gal-1 gal-2 gal-3"
+    "gal-1 gal-2 gal-3"
+    "gal-1 gal-2 gal-3"
+    "gal-1 gal-2 gal-3"
+    "gal-1 gal-2 gal-4"
+    "gal-1 gal-2 gal-4"
+    "gal-1 gal-5 gal-4"
+    "gal-1 gal-5 gal-4"
+    "gal-1 gal-5 gal-6"
+    "gal-7 gal-5 gal-6"
+    "gal-7 gal-5 gal-6"
+    "gal-7 gal-5 gal-6";
+}
+
+.authbg {
+  background-image: url("../public/auth/authbg1.svg"),
+    url("../public/auth/authbg2.svg"), url("../public/auth/authbg3.svg"),
+    url("../public/auth/authbg4.svg"), url("../public/auth/authbg5.svg"),
+    url("../public/auth/authbg1.svg");
+  background-repeat: no-repeat;
+  background-position: -15% 15%, 10% 15%, 35% 15%, 60% 15%, 85% 15%, 110% 15%;
+  height: 100vh;
+  transition: all;
+  animation-name: authanimation;
+  animation-duration: 10s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  padding: 3% 0%;
+}
+
+@keyframes authanimation {
+  0% {
+    background-position: -5% 100%, 20% 100%, 45% 100%, 70% 100%, 95% 100%,
+      120% 100%;
+  }
+  100% {
+    background-position: -15% 15%, 10% 15%, 35% 15%, 60% 15%, 85% 15%, 110% 15%;
+  }
+}
+
+
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
